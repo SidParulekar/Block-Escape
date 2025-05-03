@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -12,11 +13,20 @@ public class Player : MonoBehaviour
 
     private Vector3 startPosition;
 
+    [SerializeField] private LevelManager levelManager;
+
+    private int currentLevelIndex;
+    private int finalLevelIndex;
+
     // Start is called before the first frame update
     void Start()
     {
         startPosition = transform.position;
         playerRB = GetComponent<Rigidbody2D>();
+
+        currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+
+        finalLevelIndex = SceneManager.sceneCountInBuildSettings - 1;
     }
 
     // Update is called once per frame
@@ -51,26 +61,35 @@ public class Player : MonoBehaviour
 
     private void PlayerDied()
     {
-        transform.position = startPosition;
+        //transform.position = startPosition;
+        levelManager.RestartLevel(currentLevelIndex); 
     }
 
     private void PlayerEscaped()
-    {
-        Debug.Log("Block has Escaped!");
+    {       
+        if (currentLevelIndex < finalLevelIndex)
+        {
+            levelManager.OnLevelComplete(currentLevelIndex);
+        }
+        
+        else
+        {
+            Debug.Log("Block has Escaped!");
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Obstacle")
+        if(collision.gameObject.CompareTag("Obstacle"))
         {
-            Debug.Log("Player has hit a Spike Ball!");
+            Debug.Log("Player has hit " + collision.gameObject.name);
             PlayerDied();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Finish")
+        if(collision.gameObject.CompareTag("Finish"))
         {
             PlayerEscaped();
         }
