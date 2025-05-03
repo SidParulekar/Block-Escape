@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);
+    }
     public void OnLevelComplete(int currentLevelIndex)
     {
         Debug.Log("Level Complete!");
