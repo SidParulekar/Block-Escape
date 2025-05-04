@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     private int currentLevelIndex;
     private int finalLevelIndex;
 
+    [SerializeField] LivesController livesController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,8 +63,9 @@ public class Player : MonoBehaviour
 
     private void PlayerDied()
     {
-        //transform.position = startPosition;
-        levelManager.RestartLevel(currentLevelIndex); 
+        transform.position = startPosition;
+        //levelManager.RestartLevel();
+        livesController.ReduceLives(1);    
     }
 
     private void PlayerEscaped()
