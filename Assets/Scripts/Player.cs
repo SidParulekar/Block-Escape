@@ -63,13 +63,16 @@ public class Player : MonoBehaviour
 
     private void PlayerDied()
     {
+        SoundManager.Instance.Play(Sounds.PlayerKilled);
         transform.position = startPosition;
         //levelManager.RestartLevel();
         livesController.ReduceLives(1);    
     }
 
     private void PlayerEscaped()
-    {       
+    {
+        SoundManager.Instance.Play(Sounds.LevelComplete);
+
         if (currentLevelIndex < finalLevelIndex)
         {
             levelManager.OnLevelComplete(currentLevelIndex);
