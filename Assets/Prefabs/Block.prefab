@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   levelManager: {fileID: 8237238273370378491, guid: ac476bec7219e9b48aaf24080dfaecce, type: 3}
+  livesController: {fileID: 0}
 --- !u!61 &2483878724260571075
 BoxCollider2D:
   m_ObjectHideFlags: 0
