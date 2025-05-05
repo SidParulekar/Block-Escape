@@ -16,5 +16,6 @@ public enum Sounds
     LevelComplete,
     GameOver,
     ButtonClick,
-    BackgroundMusic
+    BackgroundMusic,
+    GameWin
 }

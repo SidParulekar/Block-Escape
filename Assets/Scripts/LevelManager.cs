@@ -22,17 +22,12 @@ public class LevelManager : MonoBehaviour
         }    
     }
 
-    public void StartGame()
+    public void LoadFirstLevel()
     {
         SoundManager.Instance.Play(Sounds.ButtonClick);
-        SceneManager.LoadScene(1);    
+        SceneManager.LoadScene(1);
     }
 
-    public void QuitGame()
-    {
-        SoundManager.Instance.Play(Sounds.ButtonClick);
-        SceneManager.LoadScene(0);
-    }
 
     public void OnLevelComplete(int currentLevelIndex)
     {

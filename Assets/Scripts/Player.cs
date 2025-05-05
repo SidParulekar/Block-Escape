@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
 
     [SerializeField] LivesController livesController;
 
+    private bool escaped = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,6 +71,11 @@ public class Player : MonoBehaviour
         livesController.ReduceLives(1);    
     }
 
+    public int GetPlayerLives()
+    {
+        return livesController.GetLives();
+    }
+
     private void PlayerEscaped()
     {
         SoundManager.Instance.Play(Sounds.LevelComplete);
@@ -80,8 +87,14 @@ public class Player : MonoBehaviour
         
         else
         {
+            escaped = true;
             Debug.Log("Block has Escaped!");
         }
+    }
+
+    public bool HasPlayerEscaped()
+    {
+        return escaped;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

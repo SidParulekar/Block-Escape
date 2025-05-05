@@ -198,8 +198,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8237238273370378491, guid: ac476bec7219e9b48aaf24080dfaecce, type: 3}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+      - m_Target: {fileID: 4088829335942175112, guid: caa2fba39e4dfe0498e1fc3ab9209810, type: 3}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -603,8 +603,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8237238273370378491, guid: ac476bec7219e9b48aaf24080dfaecce, type: 3}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+      - m_Target: {fileID: 4088829335942175112, guid: caa2fba39e4dfe0498e1fc3ab9209810, type: 3}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
@@ -1366,9 +1366,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0fb54cb370c4eb4c929487006a9ef4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  livesController: {fileID: 8012972100705563450}
-  gameOverScreen: {fileID: 7608767554757768126}
-  player: {fileID: 0}
 --- !u!1 &8012972101583833802
 GameObject:
   m_ObjectHideFlags: 0

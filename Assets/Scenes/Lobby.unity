@@ -538,7 +538,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &435194683
+--- !u!1001 &638981249
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -547,7 +547,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8237238273370378492, guid: ac476bec7219e9b48aaf24080dfaecce, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8237238273370378492, guid: ac476bec7219e9b48aaf24080dfaecce, type: 3}
       propertyPath: m_LocalPosition.x
@@ -595,10 +595,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac476bec7219e9b48aaf24080dfaecce, type: 3}
---- !u!114 &435194684 stripped
+--- !u!114 &638981250 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8237238273370378491, guid: ac476bec7219e9b48aaf24080dfaecce, type: 3}
-  m_PrefabInstance: {fileID: 435194683}
+  m_PrefabInstance: {fileID: 638981249}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -1112,11 +1112,13 @@ MonoBehaviour:
   - soundType: 1
     soundClip: {fileID: 8300000, guid: 7463e5e78bb6baa4b8caeec3645d5ae7, type: 3}
   - soundType: 2
-    soundClip: {fileID: 8300000, guid: 1d2f348735857f047b7a5defd60d930a, type: 3}
+    soundClip: {fileID: 8300000, guid: f329fa297d467034d9a8abac61884a40, type: 3}
   - soundType: 3
     soundClip: {fileID: 8300000, guid: 15e9f634e944e104dab8ac20d84b5e12, type: 3}
   - soundType: 4
     soundClip: {fileID: 8300000, guid: 5059413ec429c4507bb7bca2286fad19, type: 3}
+  - soundType: 5
+    soundClip: {fileID: 8300000, guid: 7eeb5feb3306e1a43ae0c3fc0b0cf769, type: 3}
 --- !u!4 &1889536873
 Transform:
   m_ObjectHideFlags: 0
@@ -1132,7 +1134,7 @@ Transform:
   - {fileID: 2103484622}
   - {fileID: 2335342}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1915274132
 GameObject:
@@ -1218,9 +1220,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 435194684}
+      - m_Target: {fileID: 638981250}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: LoadFirstLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1431,7 +1433,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
