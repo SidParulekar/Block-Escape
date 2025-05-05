@@ -56,7 +56,8 @@ public class SoundManager : MonoBehaviour
 
         if (clip != null)
         {
-            soundEffect.PlayOneShot(clip);
+            soundEffect.clip = clip;
+            soundEffect.Play();
         }
 
         else

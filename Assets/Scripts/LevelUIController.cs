@@ -42,7 +42,7 @@ public class LevelUIController : MonoBehaviour
 
     private void EndGame()
     {
-        SoundManager.Instance.Play(Sounds.GameOver);
+        //SoundManager.Instance.Play(Sounds.GameOver);
         gameOverScreen.SetActive(true);
         player.gameObject.SetActive(false);
     }
