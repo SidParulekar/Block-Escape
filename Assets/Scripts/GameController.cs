@@ -38,14 +38,14 @@ public class GameController : MonoBehaviour
 
     private void GameWon()
     {
-        SoundManager.Instance.Play(Sounds.GameWin);
+        //SoundManager.Instance.Play(Sounds.GameWin);
         gameWinScreen.SetActive(true);
         player.gameObject.SetActive(false);
     }
 
     private void EndGame()
     {
-        SoundManager.Instance.Play(Sounds.GameOver);
+        //SoundManager.Instance.Play(Sounds.GameOver);
         gameOverScreen.SetActive(true);
         player.gameObject.SetActive(false);
     }
